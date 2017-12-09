@@ -11,22 +11,25 @@
 
   <section class="user-input">
     <article class="input-data">
-      <h1>Linked<span><img src="linked-photo/linked-list-logo.svg" alt="link list logo"></span>List</h1>
+
+      <h1>Linked<span class="img-container"><img src="linked-photo/linked-list-logo.svg" alt="link list logo"></span>List</h1>
       <input type="text" name="title" class="input-title" placeholder="Website Title" aria-label="website-title">
       <br>
       <input type="text" name="url" class="input-url" placeholder="Website URL" aria-label="website-url">
       <br>
-      <input type="button" name="enter-button" class="enter-button" value="Enter">
+      <button class="enter-button">Enter</button>
     </article>
   </section>
 
   <section class="bookmarks">
     <article class="card">
       <h2>The Website Title</h2>
-      <a href="">www.google.com</a>
+      <nav> 
+        <a href="">www.google.com</a>
+      </nav>
       <br>
-      <button id="read-button">Read</button>
-      <button id="delete-button">Delete</button>  
+      <button class="bookmark-btn" id="read-button">Read</button>
+      <button class="bookmark-btn" id="delete-button">Delete</button>  
     </article>
   </section>
 
