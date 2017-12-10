@@ -129,6 +129,10 @@ a {
   text-decoration-color: #f2f4f4;
 }
 
+.read-btn {
+  color: #F05A28;
+}
+
 #delete-button {
  position: absolute;
  right: 1.5rem;
