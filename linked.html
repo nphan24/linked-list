@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Linked-List</title>
-  <link rel="stylesheet" type="text/css" href="linked.css"> 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-
-  <section class="user-input">
-    <article class="input-data">
-
-      <h1>Linked<span class="img-container"><img src="linked-photo/linked-list-logo.svg" alt="link list logo"></span>List</h1>
-      <input type="text" name="title" class="input-title" placeholder="Website Title" aria-label="website-title">
-      <br>
-      <input type="text" name="url" class="input-url" placeholder="Website URL" aria-label="website-url">
-      <br>
-      <button class="enter-button">Enter</button>
-    </article>
-  </section>
-
-  <section class="bookmarks">
-    <article class="card">
-      <h2>The Website Title</h2>
-      <nav> 
-        <a href="">www.google.com</a>
-      </nav>
-      <br>
-      <button class="bookmark-btn" id="read-button">Read</button>
-      <button class="bookmark-btn" id="delete-button">Delete</button>  
-    </article>
-  </section>
-
-
-<script type="text/javascript" src="linked.js"></script>
-</body>
+  <head>
+    <title>Linked-List</title>
+    <link rel="stylesheet" type="text/css" href="linked.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section class="user-input">
+      <form class="input-data">
+        <h1>Linked<span class="img-container"><img src="linked-photo/linked-list-logo.svg" alt="link list logo"></span>List</h1>
+        <input type="text" name="title" class="input-title" placeholder="Website Title" aria-label="website-title">
+        <br>
+        <input type="text" name="url" class="input-url" placeholder="Website URL" aria-label="website-url">
+        <br>
+        <button class="enter-button">Enter</button>
+      </form>
+    </section>
+    <section class="bookmarks">
+      <article class="card">
+        <h2>The Website Title</h2>
+        <nav> 
+          <a href="www.google.com">www.google.com</a>
+        </nav>
+        <br>
+        <button class="bookmark-btn" id="read-button">Read</button>
+        <button class="bookmark-btn" id="delete-button">Delete</button>  
+      </article>
+    </section>
+    <script type="text/javascript" src="linked.js"></script>
+  </body>
 </html>
