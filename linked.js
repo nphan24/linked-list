@@ -37,9 +37,11 @@ function readySecondaryButtons (parentElement) {
 
 function toggleReadButton () {
   if(event.target.matches('#read-button') === true) {
+    var readLink = event.target.closest('a')
+    console.log(readLink)
     var readCardElement =event.target.closest('article');
-    // var readLink = event.target.closest('a');
-    // readLink.classList.toggle('link-read');
+    var readLink = event.target.nextElementChild;
+    // event.target.classList.toggle('link-read');
     readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
   };
@@ -53,10 +55,6 @@ function deleteButton (childElement) {
   };
 };
 
-
-// find the delete button on the card that is clicked
-// add eventlister del-btn
-// when it is clicked it removes that card from the bookmark section
 
 
 
