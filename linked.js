@@ -37,6 +37,10 @@ function readySecondaryButtons (parentElement) {
 
 function toggleReadButton () {
   if(event.target.matches('#read-button') === true) {
+    var readCardElement =event.target.closest('article');
+    // var readLink = event.target.closest('a');
+    // readLink.classList.toggle('link-read');
+    readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
   };
 };
