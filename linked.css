@@ -80,6 +80,16 @@ a {
   text-decoration-color: #f2f4f4;
 
 }
+
+a:hover {
+  text-decoration-color: #FFC107;
+  color: #455A64;
+}
+
+.link-read {
+  text-decoration-color: #CFD8DC;
+}
+
 .user-input {
   background-color: #455A64;
   text-align: center;
@@ -111,6 +121,10 @@ a {
   color: #fff;
 }
 
+.enter-button:hover {
+  background-color: #ffd773;
+}
+
 .card {
   position: relative;
   padding: 1.5rem;
@@ -121,6 +135,10 @@ a {
   border: 0.2rem  solid #607D8b;
 }
 
+.card-read {
+  background-color: #f2f4f4;
+}
+
 .bookmark-btn {
   font-size: 2rem;
   color: #455A64;
@@ -128,6 +146,12 @@ a {
   text-decoration: underline;
   text-decoration-color: #f2f4f4;
 }
+
+.bookmark-btn:hover {
+  text-decoration-color: #FFC107;
+  color: #455A64;
+}
+
 
 .read-btn {
   color: #F05A28;
