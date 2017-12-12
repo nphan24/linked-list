@@ -2,13 +2,6 @@ var title = document.querySelector('.input-title');
 var url = document.querySelector('.input-url');
 var enterBtn = document.querySelector('.enter-button');
 
-
-
-// readBtn.addEventListener('click', toggleReadButton);
-enterBtn.addEventListener('click', createElements);
-
-// title.addEventListener('keyup', grabUserData);
-
 function createElements(event) {
   event.preventDefault();
   var parentElement = document.querySelector('.bookmarks');
@@ -28,6 +21,13 @@ function createCard(parentElement, childElement) {
     <button class="bookmark-btn" id="read-button">Read</button>
     <button class="bookmark-btn" id="delete-button">Delete</button> `);
   parentElement.appendChild(childElement);
+  deleteInputField();
+};
+
+function deleteInputField() {
+  title.value = "";
+  url.value = "";
+  enterBtn.setAttribute('disabled', true);
 };
 
 function readySecondaryButtons (parentElement) {
@@ -37,11 +37,11 @@ function readySecondaryButtons (parentElement) {
 
 function toggleReadButton () {
   if(event.target.matches('#read-button') === true) {
-    var readLink = event.target.closest('a')
-    console.log(readLink)
-    var readCardElement =event.target.closest('article');
-    var readLink = event.target.nextElementChild;
+    // var readLink = event.target.closest('a')
+    // console.log(readLink)
+    // var readLink = event.target.nextElementChild;
     // event.target.classList.toggle('link-read');
+    var readCardElement = event.target.closest('article');
     readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
   };
@@ -49,11 +49,25 @@ function toggleReadButton () {
 
 function deleteButton (childElement) {
   if(event.target.matches('#delete-button') === true) {
-  var elementToRemove =event.target.closest('article')
+  var elementToRemove = event.target.closest('article')
   elementToRemove.remove();
-
   };
 };
+
+function disabledEnterButton() {
+  if(title.value === '' && url.value === ''){
+    enterBtn.disabled = true;
+  } else if (title.value === '' || url.value === '') {
+    enterBtn.diabled = true;
+  } else {
+    enterBtn.disabled = false;
+  };
+};
+
+enterBtn.addEventListener('click', createElements);
+title.addEventListener('input', disabledEnterButton);
+url.addEventListener('input', disabledEnterButton);
+
 
 
 

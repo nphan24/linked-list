@@ -15,26 +15,25 @@ html {
 }
 
 body {
+  display: flex;
+  height: 100vh;
   margin: 0; 
   width: 100%;
-  height:100vh;
-  display: flex;
-
 }
 
 h1 {
   margin: 2rem;
-  font-size: 8rem;
   color: #FFF;
+  font-size: 8rem;
 }
 
 input {
-  font-size: 2.5rem;
   height: 5rem;
-  color: #BEBFC1;
-  width: 80%;
-  padding-left: 1rem;
   margin: 3.5rem;
+  padding-left: 1rem;
+  width: 80%;
+  font-size: 2.5rem;
+  color: #BEBFC1;
 }
 
 span {
@@ -54,22 +53,20 @@ section {
 
 h2 {
   margin: 0;
+  border-bottom-color: #cfd8dc;
+  border-bottom-style: solid;
+  border-bottom-width: 80%;
   color: #455A64;
   font-size: 3rem;
-  border-bottom-style: solid;
-  border-bottom-color: #cfd8dc;
-  border-bottom-width: 80%;
   padding-bottom: 1rem;
-
 }
 
-nav{
+nav {
   width: 100%;
-  border-bottom-style: solid;
-  border-bottom-color: #cfd8dc;
-  border-bottom-width: 100%;
   padding: 1.5rem 0 2rem 0;
-
+  border-bottom-color: #cfd8dc;
+  border-bottom-style: solid;
+  border-bottom-width: 100%;
 }
 
 a {
@@ -78,12 +75,12 @@ a {
   font-weight: 400;
   font-size: 2.3rem;
   text-decoration-color: #f2f4f4;
-
 }
 
 a:hover {
-  text-decoration-color: #FFC107;
   color: #455A64;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
 }
 
 .link-read {
@@ -101,8 +98,8 @@ a:hover {
 }
 
 .bookmarks {
-  overflow: scroll;
   background-color: #CFD8DC;
+  overflow: scroll;
 }
 
 .img-container {
@@ -111,17 +108,21 @@ a:hover {
 
 .enter-button {
   margin-top: 3.5rem;
-  font-size: 1.7rem;
   height: 5rem;
   width: 80%;
+  color: #fff;
+  background-color: #F7C244;
   border-radius: 0;
   border-style: none;
-  background-color: #F7C244;
+  font-size: 1.7rem;
   font-weight: 800;
-  color: #fff;
 }
 
 .enter-button:hover {
+  background-color: #ffd773;
+}
+
+.enter-button:disabled {
   background-color: #ffd773;
 }
 
@@ -136,35 +137,32 @@ a:hover {
 }
 
 .card-read {
-  background-color: #f2f4f4;*/
+  background-color: #f2f4f4;
 }
 
 .bookmark-btn {
-  font-size: 2rem;
-  color: #455A64;
   border: none;
-  text-decoration: underline;
+  color: #455A64;
+  font-size: 2rem;
   text-decoration-color: #f2f4f4;
+  text-decoration: underline;
 }
 
 .bookmark-btn:hover {
-  text-decoration-color: #FFC107;
   color: #455A64;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
 }
-
 
 .read-btn {
   color: #F05A28;
+  font-weight: 800;
 }
 
 #delete-button {
  position: absolute;
  right: 1.5rem;
-
 }
-
-
-
 
 /*@media screen and (max-width: 320px) {
   section {
