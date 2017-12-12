@@ -1,9 +1,7 @@
 var title = document.querySelector('.input-title');
 var url = document.querySelector('.input-url');
 var enterBtn = document.querySelector('.enter-button');
-var counter = 0;
-var readCounter = 0;
-
+  
 function createElements(event) {
   event.preventDefault();
   var parentElement = document.querySelector('.bookmarks');
@@ -22,20 +20,9 @@ function createCard(parentElement, childElement) {
     <br>
     <button class="bookmark-btn" id="read-button">Read</button>
     <button class="bookmark-btn" id="delete-button">Delete</button> `);
-  parentElement.prepend(childElement);
-  counter++;
-  createCounter();
-  console.log(counter, 'add')
+  parentElement.appendChild(childElement);
   deleteInputField();
 };
-
-function createCounter() {
-  // get the buttons and change the inner html to the counter
-  var counterButton = document.querySelector('.count');
-  counterButton.innerText = counter;
-  // var readCounterButton = document.querySelector('read-count');
-  // readCounterButton.innerText = readCounter;
-}
 
 function deleteInputField() {
   title.value = "";
@@ -57,8 +44,6 @@ function toggleReadButton () {
     var readCardElement = event.target.closest('article');
     readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
-    readCounter++;
-    
   };
 };
 
@@ -66,8 +51,6 @@ function deleteButton (childElement) {
   if(event.target.matches('#delete-button') === true) {
   var elementToRemove = event.target.closest('article')
   elementToRemove.remove();
-  counter--;
-  console.log(counter, 'remove')
   };
 };
 
