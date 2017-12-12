@@ -1,6 +1,7 @@
 var title = document.querySelector('.input-title');
 var url = document.querySelector('.input-url');
 var enterBtn = document.querySelector('.enter-button');
+var counter = 0;
   
 function createElements(event) {
   event.preventDefault();
@@ -22,6 +23,8 @@ function createCard(parentElement, childElement) {
     <button class="bookmark-btn" id="delete-button">Delete</button> `);
   parentElement.appendChild(childElement);
   deleteInputField();
+  counter++;
+  counterCard();
 };
 
 function deleteInputField() {
@@ -51,6 +54,8 @@ function deleteButton (childElement) {
   if(event.target.matches('#delete-button') === true) {
   var elementToRemove = event.target.closest('article')
   elementToRemove.remove();
+  counter--;
+  counterCard();
   };
 };
 
@@ -62,6 +67,11 @@ function disabledEnterButton() {
   } else {
     enterBtn.disabled = false;
   };
+};
+
+function counterCard() {
+  var cardCountButton = document.querySelector('.count');
+  cardCountButton.innerText = counter;
 };
 
 enterBtn.addEventListener('click', createElements);
