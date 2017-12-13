@@ -2,6 +2,7 @@ var title = document.querySelector('.input-title');
 var url = document.querySelector('.input-url');
 var enterBtn = document.querySelector('.enter-button');
 var counter = 0;
+var readCounter = 0
   
 function createElements(event) {
   event.preventDefault();
@@ -35,18 +36,17 @@ function deleteInputField() {
 
 function readySecondaryButtons (parentElement) {
   parentElement.addEventListener('click', toggleReadButton);
-  parentElement.addEventListener('click', deleteButton);
+  parentElement.addEventListener('click', deleteButton); 
 };
 
 function toggleReadButton () {
   if(event.target.matches('#read-button') === true) {
-    // var readLink = event.target.closest('a')
-    // console.log(readLink)
-    // var readLink = event.target.nextElementChild;
-    // event.target.classList.toggle('link-read');
     var readCardElement = event.target.closest('article');
     readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
+    var array = document.querySelectorAll('.read-btn');
+    var readCounterText = document.querySelector('.read-count');
+    readCounterText.innerText = array.length;
   };
 };
 
