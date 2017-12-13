@@ -2,6 +2,7 @@ var title = document.querySelector('.input-title');
 var url = document.querySelector('.input-url');
 var enterBtn = document.querySelector('.enter-button');
 var counter = 0;
+var readCounter = 0
   
 function createElements(event) {
   event.preventDefault();
@@ -25,6 +26,7 @@ function createCard(parentElement, childElement) {
   deleteInputField();
   counter++;
   counterCard();
+
 };
 
 function deleteInputField() {
@@ -34,21 +36,52 @@ function deleteInputField() {
 };
 
 function readySecondaryButtons (parentElement) {
+  
   parentElement.addEventListener('click', toggleReadButton);
   parentElement.addEventListener('click', deleteButton);
+  
 };
 
 function toggleReadButton () {
+
   if(event.target.matches('#read-button') === true) {
-    // var readLink = event.target.closest('a')
-    // console.log(readLink)
-    // var readLink = event.target.nextElementChild;
-    // event.target.classList.toggle('link-read');
     var readCardElement = event.target.closest('article');
+    // var readButtons = event.target.classList;
+    var readButtons = document.querySelectorAll('.read-btn');
+    console.log(readButtons)
     readCardElement.classList.toggle('card-read');
     event.target.classList.toggle('read-btn');
-  };
-};
+
+
+    // var readLink = event.target.parentNode;
+    // var nextchild = readLink.firstChild
+    // console.log(nextchild)
+    // event.target.classList.toggle('link-read');
+    
+    
+
+
+
+
+    
+    
+    for (var i = 0; i< readButtons.length; i++){
+      if (readButtons[i] === 'read-btn') {
+        readCounter++;
+     
+        counterRead();
+      } 
+      // else if (readCounter[i] !== 'read-btn') {
+        
+      //   readCounter--;
+        
+      //   counterRead();
+      // }
+     }
+  }
+}
+
+
 
 function deleteButton (childElement) {
   if(event.target.matches('#delete-button') === true) {
@@ -73,6 +106,11 @@ function counterCard() {
   var cardCountButton = document.querySelector('.count');
   cardCountButton.innerText = counter;
 };
+
+function counterRead() {
+  var readCounterButton = document.querySelector('.read-count');
+  readCounterButton.innerText = readCounter;
+}
 
 enterBtn.addEventListener('click', createElements);
 title.addEventListener('input', disabledEnterButton);
